@@ -23,8 +23,12 @@ nav {
     height: 40px;
 }
 
-form {
-    background-color: #ceb597;
+form, .submit-history-card {
+    border: 3px solid dimgrey;
+    border-radius: 10px;
+    background-color: silver;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    margin: 2%;
     display: flex;
     flex-direction: column;
     padding-left: 50px;
@@ -36,16 +40,25 @@ input {
 }
 
 .label {
-    font-size: .8em;
+    font-size: .9em;
     font-weight: bold;
 }
 
-#submit-button {
+.label p {
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+#submit-button, .delete-button {
     background-color: rgba(10, 41, 10, 1);
     color: #cde6ba;
     width: 30%;
     height: 2em;
     margin: 2% 0 5% 25%;
+}
+
+.delete-button {
+    background-color: brown;
 }
 
 nav a {
