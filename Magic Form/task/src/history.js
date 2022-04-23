@@ -1,6 +1,15 @@
-const formData = JSON.parse(localStorage.getItem('formData')) || [];
+let formData = JSON.parse(localStorage.getItem('formData')) || [];
 
 loadData();
+setInterval(checkLS, 100);
+
+function checkLS() {
+    let len = formData.length;
+    formData = JSON.parse(localStorage.getItem('formData')) || [];
+    if (len != formData.length) {
+        location.reload();
+    }
+}
 
 function loadData() {
     formData.forEach( (e) =>  {
